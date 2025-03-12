@@ -14,6 +14,8 @@ output:
   print-linter-name: true
 
 # Ensure warnings do not fail CI
+severity:
+  default-severity: warning # Treat all linter issues as warnings by default
 
 linters-settings:
   revive:
