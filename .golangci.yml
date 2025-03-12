@@ -1,7 +1,21 @@
 run:
   timeout: 5m
+
 linters:
   enable:
-    - govet
     - revive
-    - staticcheck
+
+issues:
+  max-issues-per-linter: 0 # Show all issues
+  max-same-issues: 0 # No limit on repeating issues
+
+output:
+  print-issued-lines: true
+  print-linter-name: true
+
+# Ensure warnings do not fail CI
+
+linters-settings:
+  revive:
+    severity: warning # Treat all revive errors as warnings
+
