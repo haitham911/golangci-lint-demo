@@ -20,4 +20,9 @@ severity:
 linters-settings:
   revive:
     severity: warning # Treat all revive errors as warnings
-
+    rules:
+      - name: argument-limit
+        severity: warning
+        disabled: false
+        exclude: [""]
+        arguments: [1]
